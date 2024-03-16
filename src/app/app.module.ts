@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BodyComponent } from './components/body/body.component';
 import { FormTaskComponent } from './components/form-task/form-task.component';
+import { FormsModule } from '@angular/forms';
+import { FormTaskElementComponent } from './components/form-task-element/form-task-element.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { FormTaskComponent } from './components/form-task/form-task.component';
     HeaderComponent,
     NavbarComponent,
     BodyComponent,
-    FormTaskComponent
+    FormTaskComponent,
+    FormTaskElementComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

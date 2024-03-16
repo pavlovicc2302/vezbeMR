@@ -1,1 +1,2 @@
-<p>body works!</p>
+<app-form-task (addedTask)="addTask($event)"></app-form-task>
+<app-form-task-element *ngFor="let task of tasks" [title]="task.title" [description]="task.description" [priority]="task.priority"></app-form-task-element>

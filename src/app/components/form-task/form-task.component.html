@@ -1,1 +1,40 @@
-<p>form-task works!</p>
+<div class="columns is-centered">
+    <div class="column is-half"><br>
+      <div class="box">
+        
+        <div class="field">
+          <label class="label">Task title</label>
+          <div class="control">
+            <input class="input" type="text" [(ngModel)]="title">
+          </div>
+        </div>
+  
+        <div class="field">
+          <label class="label">Task description</label>
+          <div class="control">
+            <input class="input" type="text" [(ngModel)]="description"> 
+          </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Priority</label>
+            <div class="control">
+                <select class="input" [(ngModel)]="selectedPriority" (change)="onPriorityChange()">
+                    <option values="low">Low</option>
+                    <option values="medium">Medium</option>
+                    <option values="high">High</option>
+                </select>
+            </div>
+          </div>
+  
+        <button class="button is-link" (click)="onSaveTask()" >Save task!</button>
+          <br><br>
+        
+        <p style="font-size: 20px; text-align: center; font-weight: bold; color: green;" *ngIf="success"> {{status}}</p>
+        <p style="font-size: 20px; text-align: center; font-weight: bold; color:red;" *ngIf="!success"> {{status}}</p>
+
+        
+
+      </div>
+    </div>
+  </div>
