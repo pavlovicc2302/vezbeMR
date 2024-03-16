@@ -1,7 +1,14 @@
-<app-header>
+<app-header> </app-header>
 
-</app-header>
+<app-quote-form (addedQuote)="addQuote($event)"> </app-quote-form>
 
-<app-quote-form>
-  
-</app-quote-form>
+<!-- <app-quote-element text="Novi tekst" author="Novi autor"  ></app-quote-element> -->
+
+<!-- for petlja-->
+<app-quote-element *ngFor="let quote of quotes" [author]="quote.author" [text]="quote.text">
+</app-quote-element>
+
+<br><br>
+<button class="button" (click)="show=!show"> Promeni</button><br>
+<img src="https://i.pinimg.com/originals/56/20/78/562078673349fa527fde98ef13fc1843.png" *ngIf="show" width="500" height="500">
+<img src="https://i.pinimg.com/736x/35/a1/62/35a162227183ca03e6e009eeca875b75.jpg" *ngIf="!show" width="500" height="500">

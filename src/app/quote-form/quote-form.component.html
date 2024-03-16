@@ -6,7 +6,7 @@
         <div class="field">
           <label class="label">Quote</label>
           <div class="control">
-            <input class="input" type="text">
+            <input class="input" type="text" [(ngModel)]="text"> <!-- two-way data binding -->
           </div>
         </div>
   
@@ -17,9 +17,10 @@
           </div>
         </div>
   
-        <p class="title"> {{text}} - {{author}}</p>
-        <p class="title" [innerText]="fullQuote"></p>
-        <button class="button is-link" [disabled]="turnOff()" >Add quote!</button>
+        
+        <p class="title"> '{{text}}' - {{author}}</p> <!-- string interpolation -->
+        <p class="title" [innerText]="fullQuote"></p> <!-- property binding -->
+        <button class="button is-link" (click)="onAddQuote()" >Add quote!</button> <!-- event binding -->
       </div>
     </div>
   </div>
