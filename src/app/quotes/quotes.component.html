@@ -1,1 +1,13 @@
-<p>quotes works!</p>
+<!-- kada se klikne na dugme, onda treba da se prikaze forma -->
+<div class="has-text-centered" style="margin-top: 12px;">
+    <button class="button is-link" (click)="onAddQuote()">Add quote</button>
+
+    <!-- Omogucili smo da kada kliknemo na Quotes link, odlazimo na stranicu gde se prikazuje
+    lista citata i dugme Add quote. Kada kliknemo na to dugme, onda se ucitava forma za dodavanje
+    novog citata. Na Home i Fun-facts stranicama se ta forma (i lista citata) vise nece prikazivati -->
+</div>
+<router-outlet></router-outlet>
+
+<!-- for petlja-->
+<app-quote-element *ngFor="let quote of quotes" [author]="quote.author" [text]="quote.text">
+</app-quote-element>

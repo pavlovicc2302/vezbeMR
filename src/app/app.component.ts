@@ -10,26 +10,6 @@ import { QuoteService } from './quotes.service';
 export class AppComponent {
   title = 'vezbe-app';
 
-  
-  // quotes: Quote[] =[
-  //   new Quote('Meet me at midnight!','Taylor Swift'),
-  //   new Quote('One single thread of gold tied me to you.','Taylor Swift')
-  // ]
-
-  //addQuote(quote:Quote){
-   // this.quotes.push(quote);
-  //}
-
-  constructor(private quotesService:QuoteService){
-
-  }
-
-  quotes: Quote[] = this.quotesService.quotes;
-
-  addQuote(quote:Quote){
-    this.quotes.push(quote);
-  }
-
   show = true;
 
   

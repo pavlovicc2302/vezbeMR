@@ -2,13 +2,12 @@
 
 <router-outlet></router-outlet>
 
-<app-quote-form (addedQuote)="addQuote($event)"> </app-quote-form>
+<!-- <app-quote-form (addedQuote)="addQuote($event)"> </app-quote-form> -->
 
 <!-- <app-quote-element text="Novi tekst" author="Novi autor"  ></app-quote-element> -->
 
-<!-- for petlja-->
-<app-quote-element *ngFor="let quote of quotes" [author]="quote.author" [text]="quote.text">
-</app-quote-element>
+<!-- Ovde je bila lista citata, ali je to sada prebaceno u quotes.component.html -->
+
 
 <br><br>
 <button class="button" (click)="show=!show"> Promeni</button><br>
