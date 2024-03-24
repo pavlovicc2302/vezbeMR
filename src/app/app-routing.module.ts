@@ -14,11 +14,12 @@ const routes: Routes = [
   {path:'', component:HomeComponent},
 
   // na quotes putanji/ruti zelimo da se otvori Quotes komponenta
-  // children oznacava podrute date rute, tako da cemo imati npr rutu quotes/new
+  // children oznacava podrute date rute
   {path:'quotes',component:QuotesComponent, 
-  children:[{
-    path:'new',component:QuoteFormComponent
-  }]},
+  children:[
+    {path:'new',component:QuoteFormComponent}, // putanja /quotes/new
+    {path:':id/edit', component:QuoteFormComponent} // putanja /quotes/id_kliknutog_citata/edit
+  ]},
 
   // na fun-facts putanji/ruti zelimo da se otvori FunFacts komponenta
   {path:'fun-facts', component:FunFactsComponent}

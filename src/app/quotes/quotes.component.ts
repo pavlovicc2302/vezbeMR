@@ -22,4 +22,22 @@ export class QuotesComponent{
     this.router.navigateByUrl('/quotes/new');
   }
 
+  onEditQuote(quote: Quote){
+    this.router.navigate(
+      ['quotes',quote.id,'edit'], 
+      {queryParams:{text:quote.text, author:quote.author}}
+    );
+
+    /* Mi smo u quotes.component.html prolazi kroz listu citata, i onda smo u okviru metode onEditQuote() prosledili podatke o onom citatu na koji smo kliknuli. 
+    Kada kliknemo na taj citat odlazi se na putanju localhost:4200/quotes/id_kliknutog_citata/edit 
+
+    Preko queryParams smo obezbedili da se u adress bar-u cuvaju podaci iz tog citata tj text i author
+    Te queryParams cemo iskoristiti da popunimo polja forme 
+
+    npr: localhost:4200/quotes/q1/edit/?text=Meet%20me%20at%20midnight!&author=Taylor%20Swift
+
+    %20 oznacava razmak 
+
+    */
+  }
 }

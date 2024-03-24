@@ -9,7 +9,7 @@ export class Quote{
     // }
 
     // drugi nacin:
-    constructor(public text:string, public author:string){
+    constructor(public id:string, public text:string, public author:string){
         
     }
 }

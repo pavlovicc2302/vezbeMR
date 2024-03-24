@@ -9,5 +9,5 @@
 <router-outlet></router-outlet>
 
 <!-- for petlja-->
-<app-quote-element *ngFor="let quote of quotes" [author]="quote.author" [text]="quote.text">
+<app-quote-element *ngFor="let quote of quotes" [author]="quote.author" [text]="quote.text" (click)="onEditQuote(quote)">
 </app-quote-element>
