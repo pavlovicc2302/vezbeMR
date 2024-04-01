@@ -1,17 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {
-  ViewDidEnter,
-  ViewDidLeave,
-  ViewWillEnter,
-  ViewWillLeave,
-} from '@ionic/angular';
+import { ViewWillEnter, ViewWillLeave, ViewDidEnter, ViewDidLeave } from '@ionic/angular';
 
 @Component({
-  selector: 'app-quotes',
-  templateUrl: './quotes.page.html',
-  styleUrls: ['./quotes.page.scss'],
+  selector: 'app-fun-facts',
+  templateUrl: './fun-facts.page.html',
+  styleUrls: ['./fun-facts.page.scss'],
 })
-export class QuotesPage
+export class FunFactsPage
   implements
     OnInit,
     OnDestroy,
@@ -24,7 +19,7 @@ export class QuotesPage
     console.log('constructor');
   }
   ngOnInit() {
-    console.log('ngOnInit')
+    console.log('ngOnInit');
   }
 
   ngOnDestroy(): void {

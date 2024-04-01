@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FunFactPageRoutingModule } from './fun-fact-routing.module';
+import { FunFactsPageRoutingModule } from './fun-facts-routing.module';
 
-import { FunFactPage } from './fun-fact.page';
+import { FunFactsPage } from './fun-facts.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FunFactPageRoutingModule
+    FunFactsPageRoutingModule
   ],
-  declarations: [FunFactPage]
+  declarations: [FunFactsPage]
 })
-export class FunFactPageModule {}
+export class FunFactsPageModule {}

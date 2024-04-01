@@ -12,8 +12,8 @@ const routes: Routes = [
     loadChildren: () => import('./quotes/quotes.module').then( m => m.QuotesPageModule)
   },
   {
-    path: 'fun-fact',
-    loadChildren: () => import('./fun-fact/fun-fact.module').then( m => m.FunFactPageModule)
+    path: 'fun-facts',
+    loadChildren: () => import('./fun-facts/fun-facts.module').then( m => m.FunFactsPageModule)
   },
 ];
 
